@@ -5,11 +5,19 @@ const radius = 220;
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
 
-const barColor = "#73C8D2";
+let innerChartScatterPlot;
+
+const tooltipWidth = 150;
+const tooltipHeight = 80;
+
+const barColor = "#4C763B";
 const bodyBackgroundColor = "#fffaf0";
 
 const xScale = d3.scaleLinear();
 const yScale = d3.scaleLinear();
+const xScaleScatterPlot = d3.scaleLinear();
+const yScaleScatterPlot = d3.scaleLinear();
+const colorScale = d3.scaleOrdinal();
 
 const binGenerator = d3.bin()
                        .value(d => d.energyConsumption);
@@ -29,4 +37,3 @@ const filters_screen_size = [
     { id: "65", label: `65"`, isActive: false},
     { id: "98", label: `98"`, isActive: false},
 ];
-

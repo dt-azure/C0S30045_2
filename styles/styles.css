@@ -68,7 +68,7 @@ footer .ai-claim {
 }
 
 .responsive-svg-container {
-    margin: 0 auto;
+    margin: 0 auto 60px;
     width: 100%;
     max-width: 800px;
     max-height: 600px;
@@ -112,33 +112,8 @@ footer .ai-claim {
 
 .chart-tile {
     padding: 20px 0 60px;
+    margin-top: 40px;
     text-align: center;
     font-size: 1.4rem;
     font-weight: 600;
 }
-
-
-.home-page #home-nav-btn,
-.donut-chart-page #donut-nav-btn,
-.bar-chart-page #bar-nav-btn,
-.donut-chart-page #donut-nav-btn,
-.line-chart-page #line-nav-btn {
-    background-color: #FFC400;
-    border: 2px solid #FFC400;
-}
-
-.home-page #home-nav-btn p,
-.donut-chart-page #donut-nav-btn p,
-.bar-chart-page #bar-nav-btn p,
-.line-chart-page #line-nav-btn p {
-    color: #B6771D;
-}
-
-.title .nav .pill:hover {
-    background-color: #16476A;
-}
-
-.title .nav .pill:hover p {
-    color: white;
-}
-

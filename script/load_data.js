@@ -9,7 +9,10 @@ d3.csv("./data/Ex6_TVdata.csv", d => {
     };
 }).then(data => {
     createHistogram(data);
+    createScatterPlot(data);
     populateFilters(data);
+    createTooltip();
+    handleMouseEvents();
 }).catch(error => {
     console.log("Error loading data: ", error);
 });
