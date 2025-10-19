@@ -11,38 +11,25 @@ body {
     min-height: 100vh;
 }
 
+section {
+    padding: 30px 0;
+}
+
 .container {
     max-width: 95%;
     margin: 0 auto;
 }
 
-.svg-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 50px auto;
+.home-page #home-nav-btn {
+    color: #F6A227;
 }
 
-section {
-    padding: 30px 0;
+.television-page #tele-nav-btn {
+    color: #F6A227;
 }
 
-.title {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-.examples {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.examples img {
-    margin: 10px 0;
-    max-width: 1200px;
+.about-page #about-nav-btn {
+    color: #F6A227;
 }
 
 footer {
@@ -83,6 +70,75 @@ footer .ai-claim {
 .responsive-svg-container {
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: 800px;
+    max-height: 600px;
+}
+
+.title h1 {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.title h3 {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.title .nav {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.title .nav p {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #16476A;
+    transition: all 0.2s ease-in-out;
+}
+
+.title .nav .pill {
+    border: 2px solid #16476A;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.chart-tile {
+    padding: 20px 0 60px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+.home-page #home-nav-btn,
+.donut-chart-page #donut-nav-btn,
+.bar-chart-page #bar-nav-btn,
+.donut-chart-page #donut-nav-btn,
+.line-chart-page #line-nav-btn {
+    background-color: #FFC400;
+    border: 2px solid #FFC400;
+}
+
+.home-page #home-nav-btn p,
+.donut-chart-page #donut-nav-btn p,
+.bar-chart-page #bar-nav-btn p,
+.line-chart-page #line-nav-btn p {
+    color: #B6771D;
+}
+
+.title .nav .pill:hover {
+    background-color: #16476A;
+}
+
+.title .nav .pill:hover p {
+    color: white;
 }
 

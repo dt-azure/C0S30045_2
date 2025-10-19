@@ -1,0 +1,36 @@
+.filter p {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1B3C53;
+}
+
+.filter-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.filter button {
+    padding: 10px 26px;
+    background-color: #16476A;
+    border: 1px solid #16476A;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.filter button.active {
+    background-color: #BF092F;
+    border-color: #BF092F;
+    color: white;
+}
+
+.filter button:hover {
+    background-color: #FF9D00;
+    border-color: #FF9D00;
+    color: white;
+}
