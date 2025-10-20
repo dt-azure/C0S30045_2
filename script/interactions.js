@@ -1,4 +1,7 @@
 const populateFilters = (data) => {
+    let screenTech = "all";
+    let screenSize = "all";
+
     d3.select("#filters_screen")
       .selectAll(".filter")
       .data(filters_screen)
@@ -12,10 +15,13 @@ const populateFilters = (data) => {
                 filter.isActive = d.id === filter.id ? true : false;
             });
 
+            screenTech = d.id;
+
             d3.selectAll("#filters_screen .filter")
               .classed("active", filter => filter.id === d.id ? true : false);
             
-              updateHistogram(d.id, "screenTech", data);
+
+            updateHistogram(data);
         }
       });
 
@@ -29,18 +35,27 @@ const populateFilters = (data) => {
         if (!d.isActive)
         {
             filters_screen_size.forEach(filter => {
-                filter.isActive = d.id === filter.id ? true : false;
+                filter.isActive = d.id == filter.id ? true : false;
             });
 
+            screenSize = d.id;
+
             d3.selectAll("#filters_screen_size .filter")
-              .classed("active", filter => filter.id === d.id ? true : false);
-            
-              updateHistogram(d.id, "screenSize", data);
+              .classed("active", filter => filter.id == d.id ? true : false);
+
+            updateHistogram(data);
         }
       });
 
-      const updateHistogram = (filterId, filterCategory, data) => {
-        const updatedData = filterId === "all" ? data : data.filter(tv => tv[filterCategory] == filterId);
+      const updateHistogram = (data) => {
+        const updatedData = data.filter(tv => {
+          const screen_tech_match = screenTech === "all" || tv.screenTech === screenTech;
+          const screen_size_match = screenSize === "all" || tv.screenSize == screenSize;
+
+          return screen_tech_match && screen_size_match;
+        });
+
+        console.log(updatedData);
 
         const updatedBins = binGenerator(updatedData);
 
